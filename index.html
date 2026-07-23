@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funding Calendar | One Rhode Consulting — Navigation Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#2d4a5a;--mid:#3a5f73;--cyan:#4dd9c0;--paper:#d5e4e4;--card:#fff;--line:#dbe6e6;--ink:#1c2e37;--muted:#4d6470;--amber:#b06a1f;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,sans-serif;}
+header{background:var(--navy);color:#fff;padding:30px 40px 26px;}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--cyan);font-weight:600;}
+header h1{font-family:'Barlow Condensed',sans-serif;font-size:40px;margin:6px 0 8px;font-weight:700;letter-spacing:.01em;}
+header p{margin:0;max-width:900px;font-size:14.5px;line-height:1.6;color:#cfe0e0;}
+main{max-width:1600px;margin:0 auto;padding:26px 40px 70px;}
+.alert{background:#fff6e8;border-left:4px solid var(--amber);border-radius:8px;padding:16px 20px;margin:0 0 24px;}
+.alert h2{font-family:'Barlow Condensed',sans-serif;margin:0 0 8px;font-size:20px;color:var(--amber);}
+.alert ul{margin:0;padding-left:20px;font-size:13.5px;line-height:1.9;color:#5a4020;}
+.alert a{color:#8a4f12;text-decoration:none;}
+.alert a:hover{text-decoration:underline;}
+.alert .mini{font-size:11.5px;font-weight:600;background:#f6e3c8;padding:2px 8px;border-radius:999px;margin-left:6px;white-space:nowrap;}
+.disclaimer{background:var(--navy);color:#dbeceb;border-radius:10px;padding:20px 24px;margin:0 0 30px;font-size:13.5px;line-height:1.65;}
+.disclaimer strong{color:var(--cyan);}
+.banner{display:flex;align-items:baseline;gap:14px;margin:38px 0 4px;padding-bottom:10px;border-bottom:3px solid var(--navy);}
+.banner h2{font-family:'Barlow Condensed',sans-serif;font-size:30px;margin:0;color:var(--navy);letter-spacing:.02em;}
+.banner span{font-size:13px;color:var(--muted);}
+.month{margin:24px 0 0;}
+.month h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;color:var(--mid);margin:0 0 12px;letter-spacing:.06em;text-transform:uppercase;border-left:4px solid var(--cyan);padding-left:10px;}
+.month h3 span{color:var(--muted);font-weight:500;}
+.month.fc h3{border-left-color:#b9c9c9;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;}
+.card{background:var(--card);border-top:3px solid var(--cyan);border-radius:10px;padding:15px 17px 16px;display:flex;flex-direction:column;gap:7px;box-shadow:0 3px 10px rgba(45,74,90,.10);transition:box-shadow .16s,transform .16s;}
+.card:hover{box-shadow:0 8px 22px rgba(45,74,90,.16);transform:translateY(-2px);}
+.month.fc .card{border-top-color:#a8bcbc;}
+.card.roll{border-top-color:var(--mid);}
+.ctop{display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.date{background:var(--navy);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:600;letter-spacing:.06em;padding:3px 10px;border-radius:999px;text-transform:uppercase;}
+.date.rolling{background:var(--mid);}
+.month.fc .date{background:#7d9797;}
+.amt{font-size:12px;font-weight:600;color:var(--mid);}
+.card h4{font-family:'Barlow Condensed',sans-serif;font-size:18.5px;margin:0;color:var(--navy);line-height:1.2;font-weight:600;}
+.card p{margin:0;font-size:12.7px;line-height:1.5;color:var(--muted);}
+.raw{font-size:11.5px;color:var(--mid);background:#eef4f4;border-radius:5px;padding:5px 8px;line-height:1.4;}
+.go{margin-top:auto;font-size:12px;font-weight:600;color:#0f6d7d;text-decoration:none;}
+.go:hover{text-decoration:underline;}
+.nolink{margin-top:auto;font-size:11.5px;color:#8a9a9a;font-style:italic;}
+footer{background:var(--navy);color:#bcd2d2;padding:24px 40px;font-size:12.5px;line-height:1.6;}
+@media(max-width:640px){header,main,footer{padding-left:18px;padding-right:18px;}header h1{font-size:30px;}}
+</style></head><body>
+<header>
+<div class="eyebrow">One Rhode Consulting — Navigation Service</div>
+<h1>Nonprofit Funding Calendar</h1>
+<p>A month-by-month planning tool for Rhode Island nonprofits. Use it to forecast application workload, line up internal deadlines, and plan ahead for cycles that only come around once a year.</p>
+</header>
+<main>
+
+<div class="alert">
+<h2>⚠ Closing before August 1 — act now</h2>
+<ul><li><a href="https://www.allettamcbeancharitabletrust.org/grant-application-aquidneck-island-ri/" target="_blank" rel="noopener"><strong>Alletta Morris McBean Charitable Trust</strong></a> — July 31, 2026 (for Oct meeting) <a class="mini" href="https://www.allettamcbeancharitabletrust.org/grant-application-aquidneck-island-ri/" target="_blank" rel="noopener">Apply ↗</a></li><li><a href="https://navigantcu.org/donations/" target="_blank" rel="noopener"><strong>Navigant Credit Union Community Giving</strong></a> — July 31, 2026 window (also Oct 2026) <a class="mini" href="https://navigantcu.org/donations/" target="_blank" rel="noopener">Apply ↗</a></li><li><a href="https://www.promisestudio-imagineaward.org/" target="_blank" rel="noopener"><strong>The Promise Fund: Imagine Award (Promise Venture Studio)</strong></a> — Opens July 2026 — confirm close date <a class="mini" href="https://www.promisestudio-imagineaward.org/" target="_blank" rel="noopener">Apply ↗</a></li></ul>
+</div>
+
+<div class="disclaimer">
+<strong>Please read before planning around these dates.</strong> This calendar is a planning aid, not a guarantee. Dates in the <em>Confirmed</em> section were published by the funder; dates in the <em>Forecast</em> section are our estimates based on when a funder has opened its cycle in past years. <strong>We assume grant cycles stay consistent — but this is a volatile moment in philanthropy.</strong> Funders may launch new programs, shift deadlines, pause a cycle, or end a program entirely with little or no notice, and federal funding disruption is reshaping many funders' priorities. <strong>Always verify directly with the funder before you invest time in an application.</strong> Inclusion here is not an endorsement, and this is not a complete list of every opportunity available.
+</div>
+
+<div class="banner"><h2>Confirmed Deadlines</h2><span>Published by the funder — still verify before applying</span></div>
+<section class="month "><h3>August <span>2026</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Aug 12</span><span class="amt">$500,000</span></div>
+<h4>GitLab Foundation – Powering Economic Opportunity Fund</h4>
+<p>$4M open call; flexible grants up to $500,000 for organizations partnering with employers or unions to connect workers to living-wage careers. Submit…</p>
+<div class="raw">Aug 12, 2026 (concept notes)</div><a class="go" href="https://gitlabfoundation.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Aug 14</span><span class="amt">$100,000–$500,000</span></div>
+<h4>New England Heat Pump Accelerator — Community Grants Program</h4>
+<p>Funding for community organizations to test innovative approaches to overcoming local barriers to heat pump adoption in low- and moderate-income…</p>
+<div class="raw">August 14, 2026</div><a class="go" href="https://www.nehpa.org/grants-pilots/community-grants" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Aug 15</span><span class="amt">$50,000–$100,000</span></div>
+<h4>DICK&#x27;S Sporting Goods Foundation &amp; LISC – Game On</h4>
+<p>Community Places to Play: funding ($50k–$100k, 1:1 match) plus technical assistance to create or renovate multi-use youth sport spaces in…</p>
+<div class="raw">Aug 15, 2026</div><a class="go" href="https://www.lisc.org/our-initiatives/sports-recreation/game-on/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Aug 15</span><span class="amt">$1,000</span></div>
+<h4>Ford Philanthropy Fellowship 2026</h4>
+<p>Fully funded Watson Institute fellowship for local entrepreneurs and leaders; mentorship plus $1,000 community-development stipend plus a global…</p>
+<div class="raw">Aug 15, 2026</div><a class="go" href="https://watson.is/ford-philanthropy-fellowship/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Aug 31</span></div>
+<h4>George A. Ramlose Foundation</h4>
+<p>Funds smaller organizations for specific equipment, special projects, or focused initiatives, with a preference for grants that make a clear,…</p>
+<div class="raw">July 1 – Aug 31, 2026</div><a class="go" href="https://ramlosefoundation.org/apply" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Aug</span></div>
+<h4>Washington Trust Charitable Giving</h4>
+<p>The Foundation&#x27;s areas of interest include: affordable housing and revitalization programs; business and economic development; youth and family…</p>
+<div class="raw">Opens early Aug 2026</div><a class="go" href="https://www.washtrust.com/about/Community-Support/Charitable-Giving" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+<section class="month "><h3>October <span>2026</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Oct 8</span></div>
+<h4>Rhode Island Foundation</h4>
+<p>The state&#x27;s community foundation. Community Priority, Capacity Building, and Basic Human Needs grants, plus many named funds.</p>
+<div class="raw">Rounds throughout the year; Basic Human Needs Round 2 due Oct 8, 2026</div><a class="go" href="https://rifoundation.org/grants-scholarships/find-a-grant-opportunity" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Oct 16</span></div>
+<h4>Rockland Trust Charitable Foundation</h4>
+<p>The Rockland Trust Charitable Foundation focuses on enhancing community well-being through grants that prioritize low-to-moderate income populations.…</p>
+<div class="raw">Rolling through Oct 16, 2026</div><a class="go" href="https://www.rocklandtrust.com/about-us/explore/community-giving#tab1" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Oct 16</span><span class="amt">$45,000</span></div>
+<h4>Cricket Island Foundation – Leadership Transition Fund</h4>
+<p>Supports youth-led social change organizations navigating an executive director transition, with a focus on founders/long-tenured leaders (5+ years).…</p>
+<div class="raw">Screening form rolling through Sept 1, 2026; full application Oct 16, 2026</div><a class="go" href="https://www.cricketisland.org/post/2026-cricket-island-foundation-leadership-transition-fund-request-for-proposals" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Oct 31</span><span class="amt">$5,000–$10,000</span></div>
+<h4>Lawrence Foundation</h4>
+<p>Provides unrestricted grants typically ranging from $5,000–$10,000 to U. S.-based 501(c)(3) public charities, public schools, and libraries working…</p>
+<div class="raw">Oct 31, 2026 (also April 30 cycle)</div><a class="go" href="https://thelawrencefoundation.org/application-process" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Oct 31</span></div>
+<h4>TJX Foundation</h4>
+<p>Our Community Mission is to provide great value to our communities by helping vulnerable families and children access the resources and opportunities…</p>
+<div class="raw">Portal open through Oct 31, 2026 (rolling review)</div><a class="go" href="https://www.tjx.com/corporate-responsibility/communities/our-us-foundation" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Oct</span><span class="amt">$5,000</span></div>
+<h4>BankNewport Grants ($5,000+)</h4>
+<p>BankNewport Charitable Foundation grants of $5,000 and up supporting Rhode Island 501(c)(3) nonprofit organizations, established 2023 as an extension…</p>
+<div class="raw">Oct 2026 window (quarterly: Jan/Apr/Jul/Oct)</div><a class="go" href="https://www.banknewport.com/community/charitable-giving/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Oct</span><span class="amt">$1</span></div>
+<h4>Nordstrom Community Grants</h4>
+<p>Over $1 million awarded annually across the U. S. to hyper-local, grassroots organizations addressing critical community needs for youth and families.</p>
+<div class="raw">Oct 2026 window (opens Oct 1–31)</div><span class="nolink">No direct link — search funder site</span></article>
+<article class="card">
+<div class="ctop"><span class="date">Oct</span><span class="amt">$5,000</span></div>
+<h4>BankNewport Contributions (&lt;$5,000)</h4>
+<p>Smaller-scale donations (up to $5,000) supporting specific activities such as annual fundraisers, community concerts, festivals, and youth programs.</p>
+<div class="raw">Oct 2026 window (quarterly)</div><a class="go" href="https://www.banknewport.com/community/charitable-giving/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+<section class="month "><h3>November <span>2026</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Nov 1</span></div>
+<h4>The Edwin S. Webster Foundation</h4>
+<p>The foundation normally meets twice a year, in the fall and spring and will consider requests for capital programs, special projects or operating…</p>
+<div class="raw">Nov 1, 2026 (also May 1 cycle)</div><a class="go" href="https://websterfoundation.grantsmanagement08.com/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Nov 1</span></div>
+<h4>Lloyd G. Balfour Foundation</h4>
+<p>Educational organizations that serve New England, generally focused on organizations or programs that provide support for underserved or…</p>
+<div class="raw">Nov 1, 2026 (also Mar 1, Jun 1)</div><a class="go" href="https://www.bankofamerica.com/philanthropic/foundation/?fnId=31" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Nov</span></div>
+<h4>Harry M., Miriam C. and William C. Horton Fund</h4>
+<p>Harry M. Horton&#x27;s wife Miriam established the Harry M., Miriam C. and William C. Horton Fund in 1948 to memorialize her husband and son William, and…</p>
+<div class="raw">Nov 2026 (plan ahead)</div><a class="go" href="https://www.bankofamerica.com/philanthropic/foundation/?fnId=174" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+<section class="month "><h3>December <span>2026</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Dec 15</span></div>
+<h4>Champlin Foundation — Capital Requests</h4>
+<p>RI&#x27;s largest capital funder. Equipment, construction, renovation, and real estate only — not programs or operating.</p>
+<div class="raw">Cycle Two closed July 1, 2026; Cycle One opens Dec 15, 2026 – Jan 15, 2027</div><a class="go" href="https://champlinfoundation.org/apply/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+
+<div class="banner"><h2>Rolling &amp; Open Anytime</h2><span>No fixed deadline — apply when you are ready</span></div>
+<div class="grid"><article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Albertsons Companies Foundation / Shaw&#x27;s Foundation</h4>
+<p>Shaw&#x27;s makes contributions in the following areas: Health and Nutrition - Support is provided for organizations promoting nutrition education and…</p>
+<div class="raw">Rolling</div><a class="go" href="http://shawsfoundation.org/get-funded/grant-application-process-shaws-star-market/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Amber Grant for Women</h4>
+<p>$10,000 awarded monthly to a woman-owned business (all categories, including nonprofits); monthly winners also qualify for the year-end $50,000 grant.</p>
+<div class="raw">Monthly (rolling)</div><a class="go" href="https://ambergrantsforwomen.com/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Amica Sponsorships</h4>
+<p>A sponsorship is a payment to an organization, which is producing an event or program, for which Amica will receive promotional, advertising and/or…</p>
+<div class="raw">Rolling</div><a class="go" href="https://www.amica.com/en/about-us/corporate-responsibility/charitable-grants.html" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Audacious Project (TED)</h4>
+<p>Funds bold, transformative nonprofit ideas with large-scale donor support.</p>
+<div class="raw">Rolling, no fixed deadline</div><a class="go" href="https://audaciousproject.org/apply" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Awesome Foundation Grants</h4>
+<p>Awards $1,000 monthly microgrants to individuals and groups for innovative community projects.</p>
+<div class="raw">Monthly (varies by chapter)</div><a class="go" href="https://www.awesomefoundation.org" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Bay Coast Charitable Grants and Sponsorships</h4>
+<p>BayCoast Bank has been committed to enhancing the economic vitality and social welfare of the communities we serve through charitable donations and…</p>
+<div class="raw">Rolling</div><a class="go" href="https://baycoast.bank/en/community/donations-and-sponsorships/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Beacon Bank Community Support</h4>
+<p>Beacon Bank and its foundation invest in organizations that provide a safety net to individuals and families with critical needs such as food,…</p>
+<div class="raw">Rolling</div><a class="go" href="https://www.beaconbank.com/about-us/community/community-support/grants-and-giving" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Beacon Foundation (Beacon Mutual Insurance)</h4>
+<p>The Beacon Foundation makes donations and provides grants to U. S. based 501(c)(3) organizations, and municipalities. Such organizations may include…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://www.beaconmutual.com/the-beacon-foundation/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Blue Cross Blue Shield of RI</h4>
+<p>Interested in submitting a request for event sponsorship, program support, or general support? Please take a minute to review our Charitable…</p>
+<div class="raw">Rolling (~6 weeks review)</div><a class="go" href="https://www.cybergrants.com/pls/cybergrants/quiz.display_question?x_gm_id=5590&amp;x_quiz_id=6810&amp;x_order_by=1" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Blue Meridian Partners</h4>
+<p>U.S. economic and social mobility for youth and families in poverty. No unsolicited proposals; Interest Survey open for scaling nonprofits with…</p>
+<div class="raw">Rolling (Interest Survey)</div><a class="go" href="https://bluemeridian.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Bob&#x27;s Discount Furniture Charitable Foundation</h4>
+<p>Bob’s is committed to supporting local communities through a variety of charitable giving efforts. Bob’s Discount Furniture Charitable Foundation has…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://bobscares.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Borealis Philanthropy – Just Futures Initiative</h4>
+<p>To date, Borealis has invested $95 million in grassroots organizers advancing cross-movement work to dismantle the interconnected systems that uphold…</p>
+<div class="raw">No fixed deadline — eligibility quiz required to access LOI</div><a class="go" href="https://borealis.tfaforms.net/40" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Brown University Community Partnerships (Swearer Center)</h4>
+<p>The Swearer Center works to connect the resources of Brown University to community-based entities to advance work focused on social justice and the…</p>
+<div class="raw">Rolling, inquiry-based</div><a class="go" href="https://swearer.brown.edu/community-partners/submit-inquiry" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Carter Charitable Trust Funds</h4>
+<p>The grantmaking focus is primarily on educational needs. Support is also provided to health and social services organizations. Most grants are for…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://cartertrustfunds.org/apply/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Centreville Bank Charitable Foundation – Sponsorships</h4>
+<p>Sponsorship and donation support (typically $250–$2,500) to community-based organizations aligned with Centreville Bank&#x27;s community priorities in RI…</p>
+<div class="raw">Rolling (reviewed bi-weekly)</div><a class="go" href="https://www.centrevillebank.com/Community/Local-Support/Grants-Sponsorships-1" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Coastal1 Credit Union Grants &amp; Sponsorships</h4>
+<p>Financial support for qualifying Rhode Island organizations that positively impact the community at large.</p>
+<div class="raw">Rolling</div><a class="go" href="https://www.coastal1.org/community/community-giving/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Costco Charitable Contributions</h4>
+<p>Costco Wholesale offers charitable contributions to organizations that support: Children, Education, Health &amp; Human Services. Their charitable…</p>
+<div class="raw">Rolling</div><a class="go" href="https://forms.benevity.org/eb5f89d4-4631-4c20-8681-0186712671a0" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Dave&#x27;s Marketplace Community Giving</h4>
+<p>Charitable Support: If seeking Sponsorships or Mini Grants for nonprofit events, school or civic programming, please complete the Charitable Support…</p>
+<div class="raw">Rolling</div><a class="go" href="https://www.davesmarketplace.com/CommunityGiving/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Eastern Bank Foundation – Community Donations</h4>
+<p>Community Donations: These donations are used for many purposes including galas, golf tournaments, and other events, as well as program support for…</p>
+<div class="raw">Rolling (~60-day decision)</div><a class="go" href="https://www.easternbank.com/about-us/eastern-bank-foundation/apply" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Eastern Bank Foundation – Impact Grants</h4>
+<p>Community Donations: These donations are used for many purposes including galas, golf tournaments, and other events, as well as program support for…</p>
+<div class="raw">Rolling (~60-day decision)</div><a class="go" href="https://www.easternbank.com/about-us/eastern-bank-foundation/apply" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Emergent Fund</h4>
+<p>Resourcing frontline Communities: Emergent Fund imagines a world where frontline communities are trusted and resourced to turn catalytic moments into…</p>
+<div class="raw">Rolling, monthly cycles</div><a class="go" href="https://www.emergentfund.net/apply" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Fidelity Foundation</h4>
+<p>The Fidelity Foundation is a private foundation committed to building capacity in nonprofit organizations. Foundation grants are designed to…</p>
+<div class="raw">Rolling (LOI; timing varies — confirm)</div><a class="go" href="https://www.fidelityfoundation.org/applying-and-reporting/letter-of-inquiry/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Hearst Foundations</h4>
+<p>Year-round rolling grants nationally for social services, health, education, and culture. Minimum grant $100K. Requires org budget of at least $1M.</p>
+<div class="raw">Rolling, no fixed deadline</div><a class="go" href="https://www.hearstfdn.org" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Home Depot Foundation – Path to Pro Education Grants</h4>
+<p>Grants of up to $10,000 (in Home Depot gift cards) to K-12 programs, community/technical colleges, and nonprofits focused on construction…</p>
+<div class="raw">Rolling</div><a class="go" href="https://corporate.homedepot.com/page/path-pro-education-grants-national" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Impact Fund Legal Grants</h4>
+<p>Recoverable grants to nonprofit organizations, solo practitioners, and small law firms involved in impact litigation. Funds economic, environmental,…</p>
+<div class="raw">Rolling, no fixed deadline</div><a class="go" href="https://www.impactfund.org/legal-grants/application-requirements/grant-criteria" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Jay L. Smith Family Foundation</h4>
+<p>Provides grant funding to nonprofits supporting health, families, and vulnerable populations through direct services and community programs.</p>
+<div class="raw">Rolling</div><a class="go" href="https://www.jaylsmithfamilyfoundation.org/projects" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>L.L.Bean – Sponsorship &amp; Charitable Donations</h4>
+<p>Provides charitable donations, event sponsorships/partnerships, Bootmobile appearances, and influencer/ambassador collaborations to organizations and…</p>
+<div class="raw">Rolling</div><a class="go" href="https://llbean.sponsor.com/form?pid=0&amp;cid=131321" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Marilyn Lichtman Foundation Grant</h4>
+<p>Philanthropic grant for registered nonprofits and community-based organizations driving meaningful change in education, research, community…</p>
+<div class="raw">Rolling</div><a class="go" href="https://marilynlichtmanfoundation.org/how-to-request-a-grant/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Mark Wahlberg Youth Foundation</h4>
+<p>The goal of the Mark Wahlberg Youth Foundation is to remove and eliminate barriers that prevent youth from succeeding. The mission of the Mark…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://www.markwahlbergyouthfoundation.org/grant-app" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>New Profit (Discovery Form / Build Investments)</h4>
+<p>New Profit is a venture philanthropy organization that backs breakthrough social entrepreneurs advancing equity and opportunity in the United States.…</p>
+<div class="raw">Rolling — Discovery Form accepted year-round</div><a class="go" href="https://newprofit.tfaforms.net/18" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Nonprofit Finance Fund (NFF)</h4>
+<p>Nonprofit Finance Fund® (NFF®) is a nonprofit 501(c)(3) and a Community Development Financial Institution (CDFI) that offers loans from $250,000 to…</p>
+<div class="raw">Rolling, inquiry-based</div><a class="go" href="https://nff.org/our-work/financing/eligbility/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Peter Alfond Foundation</h4>
+<p>The Peter Alfond Foundation supports nonprofit organizations in Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, Vermont, and Puerto…</p>
+<div class="raw">Rolling — submit letter of inquiry</div><a class="go" href="https://peteralfondfoundation.org/en/inquiries/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Pollination Project Daily Grant Program</h4>
+<p>Provides daily seed grants up to $1,000 for grassroots community projects.</p>
+<div class="raw">Rolling / daily</div><a class="go" href="https://thepollinationproject.org/apply-for-grant" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Raising Cane&#x27;s Community Request System</h4>
+<p>At Raising Cane’s we are actively involved in every community we serve. Requests for financial support, sponsorships, products or gift cards are…</p>
+<div class="raw">Rolling</div><a class="go" href="https://order.raisingcanes.com/account/signup" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Robert Wood Johnson Foundation – Pioneer Portfolio</h4>
+<p>Funds health, climate, and equity initiatives; municipalities eligible; grants ~$50K–$300K+</p>
+<div class="raw">Rolling — unsolicited proposals accepted year-round</div><a class="go" href="https://www.rwjf.org/en/grants/active-funding-opportunities.html" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Ronald W. Burkle Foundation Grants</h4>
+<p>The Ronald W. Burkle Foundation provides grants of up to $250,000 to nonprofit organizations supporting programs that positively impact people and…</p>
+<div class="raw">Rolling</div><a class="go" href="http://burklefoundation.com/request-a-grant/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Smart Family Fund</h4>
+<p>Smart Family fund searly-stage non-profits with the potential for positive, scalable impact that have not yet demonstrated the efficacy needed for…</p>
+<div class="raw">Rolling</div><a class="go" href="https://www.smartfamilyfund.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>TD Bank – Non-Profit Training Resource Fund</h4>
+<p>TD Charitable Foundation program providing small grants (up to $1,000) to nonprofits for approved training that builds organizational capacity and…</p>
+<div class="raw">Rolling, reviewed monthly</div><a class="go" href="https://www.td.com/content/dam/tdb/document/pdf/about-us/final-td.com-non-profit-training-resource-fund-v3-0524-acc-en.pdf" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>TechSoup</h4>
+<p>Nonprofit marketplace offering donated and deeply discounted software, hardware, and services (375+ products) to eligible nonprofits, NGOs, and…</p>
+<div class="raw">Rolling, no deadline</div><a class="go" href="https://www.techsoup.org" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Textron Charitable Contributions Program</h4>
+<p>Areas of focus: Job Training and Employment Development - including school-to-work and welfare-to-work programs, job training for underserved…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://www.cybergrants.com/pls/cybergrants/ao_login.login?x_gm_id=5056&amp;x_proposal_type_id=67602" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The Abelard Foundation East</h4>
+<p>Supports nonprofit organizations located east of the Mississippi River. The Foundation is committed to supporting local progressive social change…</p>
+<div class="raw">Rolling; reviewed for Sept 15, 2026 board meeting</div><a class="go" href="https://abelardeast.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The Hilda &amp; Preston Davis Foundation</h4>
+<p>The Hilda &amp; Preston Davis Foundation provides funds to charitable organizations whose programs advance the development of all areas of the lives of…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://www.hpdavis.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The Ludcke Foundation</h4>
+<p>The Foundation devotes its grants to the fields of education, health, and human services. The trustees have a special interest in programs that focus…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://ludckefoundation.grantsmanagement08.com/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The Michael &amp; Susan Dell Foundation</h4>
+<p>We fund social enterprises that directly serve or impact children or youth from urban low-income communities in the areas of education, health, and…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://www.dell.org/apply/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The New England Patriots Foundation</h4>
+<p>The New England Patriots Foundation accepts requests for donations. The Kraft family and the New England Patriots Foundation are proud to support…</p>
+<div class="raw">Rolling</div><a class="go" href="https://forms.donationx.org/form/d11d38e8-1d1e-4514-bad0-62498e4339c0" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The NewportFed Charitable Foundation</h4>
+<p>The NewportFed Charitable Foundation offers a source of support to non-profit organizations that people depend on for health and human services,…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://newportfedfoundation.org/how-to-apply/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The Richard Davoud Donchian Foundation</h4>
+<p>Supports literacy and education programs focused on rethinking curriculum, pedagogy, and academic resources for long-term improvement in education,…</p>
+<div class="raw">Rolling</div><a class="go" href="https://www.rddonchian.org/grantrequests.htm" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>The Robert F. Stoico / FIRSTFED Charitable Foundation</h4>
+<p>The Robert F. Stoico/FIRSTFED Charitable Foundation provides support to nonprofit organizations in southeastern Massachusetts and the northern and…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://stoicofirstfed.org/apply/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>W.K. Kellogg Foundation</h4>
+<p>The W. K. Kellogg Foundation funds organizations advancing child wellbeing, racial equity, maternal and child health, food systems, workforce…</p>
+<div class="raw">Rolling, no fixed deadline</div><a class="go" href="https://www.wkkf.org/grants" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>Webster Bank Community Grants</h4>
+<p>Workforce Development: Promote job creation, strengthen small business development, and provide career skills for underserved populations. Community…</p>
+<div class="raw">Rolling (verify on site)</div><a class="go" href="https://www.websterbank.com/about/corporate-responsibility/philanthropy/grant-guidelines/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card roll">
+<div class="ctop"><span class="date rolling">Rolling</span></div>
+<h4>van Beuren Charitable Foundation</h4>
+<p>Newport-based place-based funder supporting education, health, community prosperity, and shared spaces.</p>
+<div class="raw">Rolling — first-time applicants must contact the foundation first</div><a class="go" href="https://www.vbcfoundation.org/" target="_blank" rel="noopener">Apply / details ↗</a></article></div>
+
+<div class="banner"><h2>Forecast — Based on Past Cycles</h2><span>Estimated windows. Not announced. Verify with the funder.</span></div>
+<section class="month fc"><h3>November <span>2026</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Nov</span><span class="amt">$250,000</span></div>
+<h4>TD Charitable Foundation — Housing for Everyone</h4>
+<p>TD Bank&#x27;s flagship housing program, awarding $250,000 grants to nonprofits deploying eviction-prevention and housing-stability solutions in low- and…</p>
+<div class="raw">~Oct–Nov 2026</div><a class="go" href="https://stories.td.com/us/en/article/td-charitable-foundation-opens-applications-for-10m-in-grants-for-nonprofits-helping-renters-stay-housed" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Nov</span><span class="amt">$1,000-$20,000</span></div>
+<h4>Max and Victoria Dreyfus Foundation</h4>
+<p>Funds programs where small grants ($1,000-$20,000) can make a significant difference — museums, cultural/performing arts, schools, hospitals,…</p>
+<div class="raw">~Nov 2026 (likely cutoff for Spring 2027 round — unconfirmed)</div><a class="go" href="https://www.mvdreyfusfoundation.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+<section class="month fc"><h3>January <span>2027</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Jan 15</span></div>
+<h4>Looking Out Foundation</h4>
+<p>Supports social justice, LGBTQ+ advocacy, humanitarian aid, immigrant support, and grassroots activism initiatives.</p>
+<div class="raw">Jan 15, 2027</div><span class="nolink">No direct link — search funder site</span></article>
+</div></section>
+<section class="month fc"><h3>March <span>2027</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Mar 15</span><span class="amt">$3,500</span></div>
+<h4>Whole Foods Market Foundation — Garden Grant</h4>
+<p>Provides a $3,500 grant to support new or existing edible educational gardens at K-12 public, charter, tribal, or nonprofit private schools in the U.…</p>
+<div class="raw">~March 15, 2027</div><a class="go" href="https://www.wholefoodsmarketfoundation.org/our-work/childrens-nutrition/garden-grant" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Mar</span></div>
+<h4>Educating All Learners Alliance — New Champions Fund</h4>
+<p>Annual competitive program from InnovateEDU featuring an unrestricted subgrant plus a year of support for organizations advancing inclusive education…</p>
+<div class="raw">~Feb–March 2027</div><a class="go" href="https://educatingalllearners.org/new-champions/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Mar</span></div>
+<h4>Centreville Bank Charitable Foundation — Grants</h4>
+<p>Supports local community-based organizations tackling Rhode Island&#x27;s most significant challenges, investing in education, health &amp; human services,…</p>
+<div class="raw">~March 2027</div><a class="go" href="https://www.centrevillebank.com/Community/Local-Support/Grants-Sponsorships-1" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+<section class="month fc"><h3>April <span>2027</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Apr</span><span class="amt">$50,000</span></div>
+<h4>Comcast NBCUniversal — Local Impact Grants</h4>
+<p>Unrestricted general operating grants (up to $50,000) to nonprofits in NBC/Telemundo-owned television station markets, funding youth education,…</p>
+<div class="raw">~March–April 2027</div><a class="go" href="https://www.localimpactgrants.com/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Apr</span></div>
+<h4>Centreville Bank Charitable Foundation — Grants</h4>
+<p>Supports local community-based organizations tackling Rhode Island&#x27;s most significant challenges, investing in education, health &amp; human services,…</p>
+<div class="raw">~March–April 2027</div><a class="go" href="https://www.centrevillebank.com/Community/Local-Support/Grants-Sponsorships-1" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Apr</span></div>
+<h4>Vilcek Foundation Grants</h4>
+<p>Supports nonprofits serving immigrants in arts, sciences, education, and social services. The Vilcek Foundation invites applications from eligible…</p>
+<div class="raw">~April 2027</div><a class="go" href="https://vilcek.org/grants/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Apr</span></div>
+<h4>McCarthey Dressman Education Foundation</h4>
+<p>The McCarthey Dressman Education Foundation supports K–12 educators across the United States who are developing innovative approaches to improve…</p>
+<div class="raw">~April 2027</div><a class="go" href="https://mccartheydressman.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+<section class="month fc"><h3>May <span>2027</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">May</span></div>
+<h4>Ameriprise Financial Community Grants</h4>
+<p>Supports nonprofits addressing basic needs, economic stability, and community vitality.</p>
+<div class="raw">~March–May 2027</div><a class="go" href="https://www.ameriprise.com/about/community-impact/grant-making" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+<section class="month fc"><h3>June <span>2027</span></h3><div class="grid">
+<article class="card">
+<div class="ctop"><span class="date">Jun</span><span class="amt">$25,000–$100,000</span></div>
+<h4>Kendall Foundation — New England Food Vision Prize</h4>
+<p>Supports partnerships expanding student access to local food, strengthening school/campus food procurement systems, and building a more resilient…</p>
+<div class="raw">~June 2027</div><span class="nolink">No direct link — search funder site</span></article>
+<article class="card">
+<div class="ctop"><span class="date">Jun</span><span class="amt">$35,000</span></div>
+<h4>Lawson Charitable Foundation — Impact Grant</h4>
+<p>Supports New England nonprofits working in food access across three tiers — Mobile Markets, Food Hubs, and Teaching Farms — with grants from $10,000…</p>
+<div class="raw">~June 2027</div><a class="go" href="https://lawsoncharitablefoundation.org/for-grant-seekers/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Jun</span></div>
+<h4>Kauffman Foundation — Equitable Economic Mobility Research Grants</h4>
+<p>Field-initiated research grants for scholars/research teams advancing understanding of equitable economic mobility, systems-level insight, and where…</p>
+<div class="raw">~June 2027</div><a class="go" href="https://www.kauffman.org/funding/grants/research/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+<article class="card">
+<div class="ctop"><span class="date">Jun</span></div>
+<h4>The Yass Foundation for Education — Yass Prize</h4>
+<p>Yass Prize is viewed as the “Pulitzer for Education Innovation” - devoted to identifying and elevating the next generation of education changemakers.</p>
+<div class="raw">~June 2027</div><a class="go" href="https://apply.stopforeducation.org/" target="_blank" rel="noopener">Apply / details ↗</a></article>
+</div></section>
+
+</main>
+<footer>Built by <strong>One Rhode Consulting — Navigation Service</strong>. Compiled July 2026. Content updates by request. Questions: info@onerhode.com<br>
+There is an expectation that you will thoroughly read and vet any opportunity before applying.</footer>
+</body></html>
